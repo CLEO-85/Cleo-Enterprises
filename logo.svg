@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="54" viewBox="0 0 280 54" aria-hidden="false" role="img">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7efc6b"/>
+      <stop offset="100%" stop-color="#b65bff"/>
+    </linearGradient>
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- decorative mark -->
+  <g transform="translate(8,6)">
+    <circle cx="18" cy="18" r="18" fill="#0f1724"/>
+    <path d="M10 30 L18 10 L26 30 Z" fill="url(#g1)" filter="url(#f1)"/>
+  </g>
+
+  <!-- brand text -->
+  <g transform="translate(56,36)">
+    <text x="0" y="0" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="url(#g1)">
+      CLEO'S
+    </text>
+    <text x="0" y="18" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#dfefff">
+      ENTERPRISES
+    </text>
+  </g>
+
+  <title>CLEO'S ENTERPRISES</title>
+</svg>

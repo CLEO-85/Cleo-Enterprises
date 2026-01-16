@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator — Cleo's Enterprises</title>
+    <link rel="stylesheet" href="STYLE.css">
+    <style>
+        .calculator-container { max-width: 420px; margin: 60px auto; padding: 40px; }
+        .calculator { background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)); border-radius: 16px; padding: 24px; border: 1px solid rgba(126,252,107,0.08); box-shadow: 0 12px 40px rgba(2,6,23,0.4); }
+        #display { width: 100%; padding: 16px; border-radius: 12px; border: 1.5px solid rgba(126,252,107,0.15); background: rgba(255,255,255,0.02); color: #7efc6b; font-size: 1.8rem; font-weight: 700; text-align: right; margin-bottom: 16px; font-family: 'Segoe UI', monospace; }
+        .calc-top { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 16px; }
+        .calc-top input { flex: 1; }
+        #copy { padding: 16px 12px; border-radius: 12px; border: 1.5px solid rgba(126,252,107,0.15); background: rgba(126,252,107,0.08); color: #7efc6b; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        #copy:hover { background: rgba(126,252,107,0.15); }
+        .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .keys button { padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #e6eef8; font-weight: 700; cursor: pointer; transition: all 0.3s; font-size: 1rem; }
+        .keys button:hover { background: rgba(126,252,107,0.12); border-color: rgba(126,252,107,0.2); color: #7efc6b; }
+        .keys button:active { transform: scale(0.95); }
+        .keys #equals { background: linear-gradient(135deg, #7efc6b, #b65bff); color: #071022; font-size: 1.1rem; grid-column: span 2; }
+        .keys #equals:hover { box-shadow: 0 8px 20px rgba(126,252,107,0.2); }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="INDEX.html" class="logo" aria-label="Cleo's Enterprises Home">
+                <svg width="200" height="44" viewBox="0 0 280 54" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cleo's Enterprises">
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1">
+                            <stop offset="0%" stop-color="#7efc6b"/>
+                            <stop offset="100%" stop-color="#b65bff"/>
+                        </linearGradient>
+                        <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="2" result="b"/>
+                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+                    <g transform="translate(8,6)">
+                        <circle cx="18" cy="18" r="18" fill="#0f1724"/>
+                        <path d="M10 30 L18 10 L26 30 Z" fill="url(#g1)" filter="url(#f1)"/>
+                    </g>
+                    <g transform="translate(56,36)">
+                        <text x="0" y="0" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="url(#g1)">CLEO'S</text>
+                        <text x="0" y="18" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#dfefff">ENTERPRISES</text>
+                    </g>
+                </svg>
+            </a>
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="INDEX.html">Home</a></li>
+            <li><a href="about.HTML">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="CLE😮‍💨'S CALC.html" class="active">Calculator</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn outline" data-modal="signin">Sign In</button>
+            <button class="btn primary" data-modal="signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <div id="main-content"></div>
+    <section style="padding: 60px 32px;">
+        <div class="calculator-container" style="animation: fadeInScale 0.6s ease-out;">
+            <h1 style="font-size: 2.4rem; color: #f8fbff; margin-bottom: 12px; text-align: center; font-weight: 800;">Calculator</h1>
+            <p style="text-align: center; color: var(--muted); margin-bottom: 32px; font-size: 1rem; line-height: 1.6;">A simple yet powerful calculator for your quick calculations. Click the buttons or use your keyboard to perform operations.</p>
+            
+            <div class="calculator">
+                <div class="calc-top">
+                    <input id="display" type="text" disabled aria-label="Calculator display" value="0">
+                    <button id="copy" title="Copy result to clipboard">📋</button>
+                </div>
+                <div class="keys">
+                    <button id="clear" title="Clear display">C</button>
+                    <button id="backspace" title="Delete last digit">⌫</button>
+                    <button id="divide" title="Divide">÷</button>
+                    <button id="multiply" title="Multiply">×</button>
+                    
+                    <button id="seven">7</button>
+                    <button id="eight">8</button>
+                    <button id="nine">9</button>
+                    <button id="subtract" title="Subtract">−</button>
+                    
+                    <button id="four">4</button>
+                    <button id="five">5</button>
+                    <button id="six">6</button>
+                    <button id="add" title="Add">+</button>
+                    
+                    <button id="one">1</button>
+                    <button id="two">2</button>
+                    <button id="three">3</button>
+                    <button id="decimal" title="Decimal point">.</button>
+                    
+                    <button id="zero">0</button>
+                    <button id="equals" title="Calculate result">=</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px; text-align: center;">
+                <a href="INDEX.html" class="btn outline large" style="display: inline-block; padding: 14px 28px; font-size: 1rem;">← Back Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="credits">© <strong>Cleo's Enterprises</strong> — 2025</div>
+            <div class="footer-links">
+                <a href="Contact.html">Contact</a>
+                <a href="about.HTML">About</a>
+                <a href="Blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="CLE😮‍💨.JS"></script>
+    <script src="script.js"></script>
+</body>
+</html>

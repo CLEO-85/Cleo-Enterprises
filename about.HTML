@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cleo's Enterprises</title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="INDEX.html" class="logo" aria-label="Cleo's Enterprises Home">
+                <svg width="200" height="44" viewBox="0 0 280 54" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cleo's Enterprises">
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1">
+                            <stop offset="0%" stop-color="#7efc6b"/>
+                            <stop offset="100%" stop-color="#b65bff"/>
+                        </linearGradient>
+                        <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="2" result="b"/>
+                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+                    <g transform="translate(8,6)">
+                        <circle cx="18" cy="18" r="18" fill="#0f1724"/>
+                        <path d="M10 30 L18 10 L26 30 Z" fill="url(#g1)" filter="url(#f1)"/>
+                    </g>
+                    <g transform="translate(56,36)">
+                        <text x="0" y="0" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="url(#g1)">CLEO'S</text>
+                        <text x="0" y="18" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#dfefff">ENTERPRISES</text>
+                    </g>
+                </svg>
+            </a>
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="INDEX.html">Home</a></li>
+            <li><a href="about.HTML" class="active">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="CLE😮‍💨'S CALC.html">Calculator</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn outline" data-modal="signin">Sign In</button>
+            <button class="btn primary" data-modal="signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <div id="main-content"></div>
+    <section class="about-section" style="padding: 72px 32px;">
+        <div class="about-container" style="max-width: 900px; margin: 0 auto;">
+            <h1 style="font-size: 2.8rem; color: #f8fbff; margin-bottom: 28px; text-align: center; font-weight: 800; animation: slideDown 0.6s ease-out;">Our Story</h1>
+            
+            <div style="background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)); padding: 48px; border-radius: 16px; border: 1px solid rgba(126,252,107,0.08); margin-bottom: 48px; animation: fadeInScale 0.7s ease-out;">
+                <h2 style="font-size: 1.8rem; color: var(--accent); margin-bottom: 20px; font-weight: 700;">Who We Are</h2>
+                <p style="font-size: 1.08rem; color: var(--muted); line-height: 1.9; margin-bottom: 20px;">Cleo's Enterprises was founded on a simple but powerful vision: to unlock value and inspire creativity. We recognized that countless people have gift cards gathering dust, and that quality video production is often out of reach for small businesses and creators. So we built a company to solve both problems.</p>
+                <p style="font-size: 1.08rem; color: var(--muted); line-height: 1.9;">Today, we're proud to be a trusted partner for gift card buyers and traders across the region, and a go-to creative team for projects ranging from social media content to event highlights and brand promotions.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-bottom: 48px;">
+                <div style="background: linear-gradient(135deg, rgba(126,252,107,0.08), rgba(182,91,255,0.04)); padding: 36px; border-radius: 16px; border: 1px solid rgba(126,252,107,0.12); animation: fadeInScale 0.6s ease-out;">
+                    <h3 style="color: var(--accent); font-size: 1.4rem; margin-bottom: 16px; font-weight: 700;">🎯 Our Mission</h3>
+                    <p style="color: var(--muted); line-height: 1.8; font-size: 1rem;">To unlock value from unused gift cards and empower creators with accessible, professional-grade video editing services that bring their visions to life.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(182,91,255,0.08), rgba(126,252,107,0.04)); padding: 36px; border-radius: 16px; border: 1px solid rgba(182,91,255,0.12); animation: fadeInScale 0.7s ease-out;">
+                    <h3 style="color: var(--accent); font-size: 1.4rem; margin-bottom: 16px; font-weight: 700;">✨ Our Vision</h3>
+                    <p style="color: var(--muted); line-height: 1.8; font-size: 1rem;">To be the most trusted and beloved gift card exchange and creative services provider in the region, known for fairness, quality, and genuine care for our clients.</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)); padding: 48px; border-radius: 16px; border: 1px solid rgba(126,252,107,0.08); margin-bottom: 48px; animation: fadeInScale 0.8s ease-out;">
+                <h2 style="font-size: 1.8rem; color: var(--accent); margin-bottom: 28px; font-weight: 700; text-align: center;">Our Core Values</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                    <div>
+                        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 12px; font-weight: 700;">💎 Integrity</h4>
+                        <p style="color: var(--muted); line-height: 1.7;">We believe in fair pricing, transparent practices, and honest communication. No hidden fees, no surprises—just straightforward business.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 12px; font-weight: 700;">🎨 Excellence</h4>
+                        <p style="color: var(--muted); line-height: 1.7;">Every video we edit, every card we process, every interaction we have reflects our commitment to doing things right and doing them well.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 12px; font-weight: 700;">❤️ Community</h4>
+                        <p style="color: var(--muted); line-height: 1.7;">We're local, personal, and genuinely invested in our clients' success. Your wins are our wins.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; animation: slideUp 0.8s ease-out;">
+                <h2 style="font-size: 1.8rem; color: #f8fbff; margin-bottom: 24px; font-weight: 700; animation: slideDown 0.6s ease-out;">Ready to Work Together?</h2>
+                <p style="color: var(--muted); font-size: 1.1rem; margin-bottom: 28px; line-height: 1.7; animation: fadeIn 0.7s ease-out;">Whether you have gift cards to trade or a video project in mind, we'd love to hear from you.</p>
+                <a href="Contact.html" class="btn primary large" style="display: inline-block; padding: 16px 32px; font-size: 1.1rem; margin-right: 12px; margin-bottom: 12px; animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);">Get in Touch</a>
+                <a href="INDEX.html" class="btn outline large" style="display: inline-block; padding: 16px 32px; font-size: 1.1rem; margin-bottom: 12px; animation: popIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="credits">© <strong>Cleo's Enterprises</strong> — 2025</div>
+            <div class="footer-links">
+                <a href="Contact.html">Contact</a>
+                <a href="about.HTML">About</a>
+                <a href="Blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

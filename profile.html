@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile - Cleo's Enterprises</title>
+  <link rel="stylesheet" href="STYLE.css">
+  <style>
+    .profile-page{ max-width:900px; margin:40px auto; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; }
+    .profile-header{ display:flex; gap:16px; align-items:center; }
+    .avatar-large{ width:72px; height:72px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#071022; font-weight:700; font-size:28px; }
+  </style>
+</head>
+<body>
+  <!-- reuse navbar by copying markup from other pages or opening the file directly -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">CLEO'S ENTERPRISES</div>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="INDEX.html">Home</a></li>
+      <li><a href="about.HTML">About</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="CLE😮‍💨'S CALC.html">Calculator</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn outline" data-modal="signin">Sign In</button>
+      <button class="btn primary" data-modal="signup">Sign Up</button>
+    </div>
+  </nav>
+
+  <main class="profile-page">
+    <div class="profile-header">
+      <div class="avatar-large">U</div>
+      <div>
+        <h1>Your profile</h1>
+        <p class="tagline">Manage your account details and preferences.</p>
+      </div>
+    </div>
+    <section style="margin-top:18px;">
+      <h2>Account</h2>
+      <p>Email: <span id="acct-email">(not signed in)</span></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const user = JSON.parse(localStorage.getItem('cleo_user')||'null');
+      if(user && user.email){
+        document.querySelector('.avatar-large').textContent = (user.name||user.email||'U')[0].toUpperCase();
+        document.getElementById('acct-email').textContent = user.email;
+      }
+    });
+  </script>
+</body>
+</html>
